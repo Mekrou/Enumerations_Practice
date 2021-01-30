@@ -19,6 +19,12 @@ namespace Enumerations
             today = DaysOfWeek.Saturday;
             
             Console.WriteLine("Today is: " + today);
+
+            // Enums under the hood are wrapped into underlying types (default int).
+            // That means we can cast them into integers. They are indexed from 0,
+            // so the code bellow will print 6.
+
+            Console.WriteLine("Today is: " + (int) today);
         }
     }
 }
